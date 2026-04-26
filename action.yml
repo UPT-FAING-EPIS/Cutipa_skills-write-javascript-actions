@@ -1,0 +1,8 @@
+name: Dad Joke Action
+description: Returns a dad joke
+outputs:
+  joke:
+    description: Dad joke text
+runs:
+  using: node20
+  main: dist/index.js
