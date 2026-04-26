@@ -1,0 +1,16 @@
+name: Joke Action
+
+on:
+  workflow_dispatch:
+  issue_comment:
+    types:
+      - created
+
+jobs:
+  joke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - id: dad_joke
+        uses: ./
+      - run: echo "${{ steps.dad_joke.outputs.joke }}"
